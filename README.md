@@ -136,7 +136,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 💖 Made with Love
 
-**Made with love by [Venkatesh](https://github.com/Hijanhv)** ❤️
+**Made with love by your janu** ❤️
 
 ---
 
