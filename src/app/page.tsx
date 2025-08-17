@@ -41,21 +41,76 @@ export default function Home() {
   if (!isInitialized) {
     return (
       <>
+        <Navbar />
         <div className="flex justify-center items-center min-h-screen font-main text-black">
-          <div className="bg-white opacity-75 -mt-4 px-8 py-4 border text-center">
-            <p className="mb-4 font-semibold text-xl">
-              Lottery ID: {lotteryId}
-            </p>
+          <div className="bg-white bg-opacity-90 shadow-xl rounded-xl p-8 border-2 border-purple-200 text-center max-w-md mx-4">
+            {/* Welcome Header */}
+            <div className="mb-6">
+              <h1 className="text-3xl font-bold text-purple-600 mb-2">
+                🎰 Welcome to Phantom Lottery! 🎰
+              </h1>
+              <p className="text-gray-600 text-sm">
+                Made with ❤️ by{" "}
+                <a 
+                  href="https://github.com/Hijanhv" 
+                  className="text-blue-600 hover:text-blue-800 underline font-semibold"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  @Hijanhv
+                </a>
+              </p>
+            </div>
+            
+            {/* Lottery Info */}
+            <div className="bg-purple-50 rounded-lg p-4 mb-6">
+              <p className="text-lg font-semibold text-purple-800 mb-2">
+                🎲 Lottery System Setup
+              </p>
+              <p className="text-sm text-gray-600 mb-3">
+                The lottery needs to be initialized before players can join.
+              </p>
+              <p className="text-purple-600 font-medium">
+                Lottery ID: {lotteryId}
+              </p>
+            </div>
+            
+            {/* Action Button */}
             {connected ? (
-              <button
-                onClick={initMaster}
-                className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-medium text-white"
-              >
-                Initialize Master
-              </button>
+              <div>
+                <button
+                  onClick={initMaster}
+                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200"
+                >
+                  🚀 Initialize Lottery System
+                </button>
+                <p className="text-xs text-gray-500 mt-3">
+                  Click to set up the lottery master account
+                </p>
+              </div>
             ) : (
-              <WalletMultiButton />
+              <div>
+                <p className="text-gray-600 mb-4">
+                  Connect your Phantom wallet to get started
+                </p>
+                <WalletMultiButton />
+              </div>
             )}
+            
+            {/* Footer */}
+            <div className="mt-6 pt-4 border-t border-gray-200">
+              <p className="text-xs text-gray-500">
+                🔗 View source on{" "}
+                <a 
+                  href="https://github.com/Hijanhv/phantom-lottery" 
+                  className="text-blue-500 hover:text-blue-700 underline"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </>
