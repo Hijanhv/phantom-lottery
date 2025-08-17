@@ -1,5 +1,7 @@
 # 🎰 Phantom Lottery - Solana dApp
 
+*A lottery dapp made with love for my friend* ❤️
+
 A decentralized lottery application built on the Solana blockchain using Phantom wallet integration.
 
 ## ✨ Features
